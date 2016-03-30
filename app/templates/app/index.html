@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curso Online</title>
+    {% load staticfiles %}
+    <link rel="stylesheet/less" type="text/css" href="{% static 'app/less/style.css' %}" />
+    <script src="{% static 'app/js/less.min.js' %}"></script>
+    <script src="{% static 'app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+</head>
+ 
+   <body>
+      <ul class="nav nav-tabs">
+         <li ng-class="{active: activetab == '/'}"><a href="#/home/">Home</a></li>
+         <li ng-class="{active: activetab == '/sobre'}"><a href="#/sobre/">Sobre</a></li>
+         <li ng-class="{active: activetab == '/contato'}"><a href="#/contato/">Contato</a></li>
+      </ul>
+ 
+      <div ng-view></div>
+ 
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+ 
+      <script src="{% static 'app/app/app.js' %}"></script>
+      <script src="{% static 'app/app/controllers/controllers.js' %}"></script>
+   </body>
+</html>
